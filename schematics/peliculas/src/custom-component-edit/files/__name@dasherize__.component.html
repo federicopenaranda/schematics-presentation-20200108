@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-sm-6">
+        <h1>Añadir <%= classify(tabla) %></h1>
+        <form [formGroup]="recordForm">
+            <div class="form-group row">
+                <label for="<%= fields2[0].name %>" class="col-sm-4 col-form-label"><%= fields2[0].name %></label>
+                <div class="col-sm-8">
+                    <input type="number" readonly class="form-control" id="<%= fields2[0].name %>" aria-describedby="emailHelp" placeholder="">
+                </div>
+            </div>
+
+            <% for ( let i=1; i<fields2.length; i++ ) { %>
+            <div class="form-group row">
+                <label for="<%= fields2[i].name %>" class="col-sm-4 col-form-label"><%= fields2[i].name %></label>
+                <div class="col-sm-8">
+                    <input formControlName="<%= fields2[i].name %>" type="text" class="form-control" id="<%= fields2[i].name %>" placeholder="">
+                </div>
+            </div>
+            <% } %>
+
+            <button 
+                (click)="(editedRecordId) ? updateRecord() : saveRecord()" 
+                [disabled]="!recordForm.valid"
+                type="submit" 
+                class="btn btn-primary">{{ (editedRecordId) ? 'Update' : 'Save' }}</button>
+            <button routerLink="/<%= dasherize(module) %>/<%= dasherize(tabla) %>-lista" class="btn btn-secondary">Cancelar</button>
+        </form>
+    </div>
+</div>

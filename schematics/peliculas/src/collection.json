@@ -1,0 +1,33 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "custom-component-lista": {
+      "description": "A custom Component",
+      "factory": "./custom-component-lista/index#customComponentLista",
+      "schema": "./custom-component-lista/schema.json"
+    },
+    "custom-service": {
+      "description": "A custom Service.",
+      "factory": "./custom-service/index#customService",
+      "schema": "./custom-service/schema.json"
+    },
+    "custom-model": {
+      "description": "A custom Model.",
+      "factory": "./custom-model/index#customModel",
+      "schema": "./custom-model/schema.json"
+    },
+    "custom-module": {
+      "description": "A custom Module.",
+      "factory": "./custom-module/index#customModule",
+      "schema": "./custom-module/schema.json"
+    },
+    "custom-component": {
+      "description": "A blank schematic.",
+      "factory": "./custom-component/index#customComponent"
+    },
+    "custom-component-edit": {
+      "description": "A blank schematic.",
+      "factory": "./custom-component-edit/index#customComponentEdit"
+    }
+  }
+}

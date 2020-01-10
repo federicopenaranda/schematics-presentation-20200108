@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "CustomModel",
+  "title": "Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the model"
+    },
+    "module": {
+      "type": "string",
+      "description": "Module name"
+    },
+    "fields": {
+      "type": "string",
+      "description": "Fields of the model"
+    }
+  },
+  "project": {
+    "type": "string",
+    "description": "Generate in specific Angular CLI workspace."
+  },
+  "required": [],
+  "additionalProperties": false
+}

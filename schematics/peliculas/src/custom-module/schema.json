@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "CustomModule",
+  "title": "Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the module"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}
